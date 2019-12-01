@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: #58B19F;
+}
+
+.baner{
+    background-color: rosybrown;
+}
+
+.lewy{
+    background-color: #9AECDB;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+}
+
+.prawy{
+    background-color: rgb(138, 209, 195);
+    width: 500px;
+    height: 550px;
+    text-align: center;
+}
+
+.prawydol{
+    background-color: #2C3A47;
+    width: 500px;
+    height: 50px;
+}
+
+
+.otacz{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.praww{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    border-bottom: 3px solid #2C3A47
+}
+
+input[type=text]{
+    border: none;
+    background: none;
+    /* text-decoration-line: underline;
+    text-decoration-color: white; */
+    border-bottom: 1px solid white;
+    width: 80%;
+}
+
+input[type=submit]{
+    background-color: whitesmoke;
+    color: #2C3A47;
+    border-radius: 5px;
+    border: none;
+    /* height: 40px; */
+    width: 18%;
+    padding: 5px 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}

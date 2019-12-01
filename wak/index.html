@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Satisfy");
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,h2,h3,h4,h5,h6,a,p,span{
+            padding-bottom: 0.714em !important;
+            padding-top: 0.714em !important;
+            text-transform:  uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 400px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        body, html{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+            background: #252525;
+            font-family: "Raleway", sans-serif;
+            text-align: center;
+        }
+
+        .noselect{
+            -webkit-user-select: none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select: none;
+        }
+
+        @-webkit-keyframes beat{
+			to {
+				-webkit-transform: scale(1.4);
+				transform: scale(1.4);
+			}
+		}
+
+		@keyframes beat{
+			to{
+				-webkit-transform: scale(1.4);
+				transform: scale(1.4);
+			}
+		}
+
+
+		.artboard .cards{
+			text-align: center;
+			min-height: 100vh;
+			overflow: hidden;
+			display: flex;
+		}
+
+		.artboard .cards .card{
+			min-width: calc(25%);
+			min-height: 100%;
+			text-align: center;
+			background-size: content;
+			background-repeat: no-repeat;
+			background-position: center;
+			cursor: pointer;
+			transition: 500ms cubic-bezier(1, 0.02,0,0.98);
+			vertical-align: middle;
+		}
+
+		.artboard .cards .card a {
+			font-family: "Satisfy", cursive;
+			font-size: 60px;
+			text-transform: capitalize;
+			vertical-align: middle;
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transition: 250ms cubic-bezier(1, 0.02, 0, 0.98);
+		}
+
+.artboard .p1 {
+  background: url("1.png");
+}
+.artboard .p2 {
+  background: url("2.jfif");
+}
+.artboard .p3 {
+  background: url("3.jfif");
+}
+.artboard .p4 {
+  background: url("4.jfif");
+}
+
+.open{
+	min-width: 100% !important;
+}
+.open a{
+	top: 100% !important;
+}
+
+.close{
+	min-width: 0% !important;
+}
+
+.close a{
+	top: -50% !important;
+}
+    </style>
+    <div class="artboard">
+        <div class="cards">
+                <div class="card p1"><a></a></div>
+                <div class="card p2"><a></a></div>
+                <div class="card p3"><a></a></div>
+                <div class="card p4"><a></a></div>
+        </div>
+    </div>
+    <script>
+        const cards= document.querySelectorAll('.card');
+        function toggleOpen(){
+            this.classList.toggle('open');
+            for(i=0; i<cards.length; i++){
+                if(cards[i] !== this){
+                    cards[i].classList.toggle('close');
+                }
+            }
+        }
+        cards.forEach(card => card.addEventListener('click', toggleOpen));
+    </script>
+</body>
+</html>
